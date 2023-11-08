@@ -18,8 +18,15 @@ if(!defined('ABSPATH'))
 }
 if(!class_exists('contactPlugin')){
     class contactPlugin{
-         require_once(plugin_dir_path(__FILE__).'/vendor/autoload.php'); 
+        
+        public function ___construct(){
+            require_once(plugin_dir_path( __FILE__ ).'/vendor/autoload.php'); 
+        }
+        public function initialize(){
+            include_once plugin_dir_path( __FILE__ ). 'includes/utilities.php';
+        }
     }
-    new class contactPlugin
-
+   $contactPlugin =   new  contactPlugin;
+   
+   $contactPlugin->initialize();
 }
